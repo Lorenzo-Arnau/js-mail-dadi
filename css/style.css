@@ -1,0 +1,89 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+body{
+  opacity: 0;
+  background-image: url("../img/header.jpg");
+}
+header{
+  width: 100%;
+  height: 150px;
+  background-image: url("../img/header1.jpg");
+  background-size: contain;
+  color:#363734;
+  text-shadow: 2px 2px 2px #000;
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Pacifico', cursive;
+}
+main{
+  width: 80%;
+  height:calc(100vh - 150px);
+  background-image: url("../img/Tessuto.jpg");
+  background-position: center;
+  margin: auto;
+}
+ main>div:first-child{
+   display: flex;
+   justify-content: space-around;
+ }
+.dadocpu,.dadouser{
+  height: 200px;
+  width: 200px;
+  background-color: ivory;
+  border: 2px solid #363734;
+  margin-top:40px;
+  text-align: center;
+  font-size: 35px;
+  line-height: 200px;
+}
+.button-dice{
+  height: 100px;
+  width: 100px;
+  background-image:url("../img/dice.jpg");
+  background-position: center;
+  background-size: cover;
+  font-weight: bold;
+  margin: auto;
+  text-align: center;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 50%;
+  line-height: 100px;
+  font-family: 'Pacifico', cursive;
+}
+.winnertext{
+  width: 250px;
+  height: 40px;
+  background-image: url("../img/gold.png");
+  background-position: center;
+  background-size: cover;
+  margin-top: 80px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 0.8em;
+  font-family: 'Pacifico', cursive;
+}
+.rolling{
+  animation: rollingdice;
+  animation-duration: 3s;
+}
+.rollingbutton{
+  animation: rollingbutton;
+  animation-duration: 3s;
+}
+@keyframes rollingdice {
+  100%{
+    transform: rotate(720deg);
+    font-size: 85px;
+    line-height: 200px;
+  }
+}
+@keyframes rollingbutton {
+  100%{
+    transform: rotate(360deg);
+  }
+}
