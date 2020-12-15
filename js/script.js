@@ -4,14 +4,19 @@ var password = 'bellapassword';
 var emailUser = prompt('Inserisca la sua e mail per accedere');
 var passwordUser = prompt('Inserisca la sua password');
 
-for (var i = 0; i < mailVerificate.length; i++) {
-  if (mailVerificate[i] !== emailUser || password !== passwordUser) {
-    alert('credenziali errate');
-  }else{
-    alert('Benvenuto! ' + emailUser);
-    document.getElementsByTagName('body')[0].style.opacity = 1;
-    document.getElementById('mail-user').innerText = emailUser;
+var emailFind;
+
+for (var i = 0; i <= mailVerificate.length; i++) {
+  if (mailVerificate[i] === emailUser && password === passwordUser) {
+    emailFind = true;
   }
+}
+if (emailFind) {
+  alert('Benvenuto! ' + emailUser);
+  document.getElementsByTagName('body')[0].style.opacity = 1;
+  document.getElementById('mail-user').innerText = emailUser;
+}else {
+  alert('Credenziali errate');
 }
 
 var dadoUtente = document.getElementById('dado-usr');
